@@ -1,0 +1,37 @@
+﻿@model BidvestWeb.Models.Organisation
+@{
+    ViewData["Title"] = "Report";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@if (Model.Profiles.Count > 0)
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">Id</th>
+                <th scope="col">First Name</th>
+                <th scope="col">Last Name</th>
+                <th scope="col">Gender</th>
+                <th scope="col">IP Address</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var profile in Model.Profiles)
+            {
+                <tr>
+                    <th scope="row">@profile.Id</th>
+                    <td>@profile.First_name</td>
+                    <td>@profile.Last_name</td>
+                    <td>@profile.Gender</td>
+                    <td>@profile.Ip_address</td>
+                </tr>
+
+            }
+        </tbody>
+    </table>
+}
+else
+{
+    <text> No data found to display</text>
+}
+
