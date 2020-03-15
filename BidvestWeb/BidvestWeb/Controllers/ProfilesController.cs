@@ -25,7 +25,7 @@ namespace BidvestWeb.Controllers
                 }
                 else
                 {
-                    return Content("Profiles not found");
+                    return Content("Profiles not found, please check the content of your file");
                 }
                 
             }
